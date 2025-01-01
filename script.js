@@ -41,7 +41,14 @@ function startQuiz(){
     currentquestionIndex=0
     score=0;
     nextButton.innerHTML="Next"
+    showQuestion();
 
+}
+function showQuestion(){
+    let currentquestion=questions[currentquestionIndex];
+    let questionNo=currentquestionIndex+1;
+    questionElement.innerHTML=questionNo+"."+currentquestion.question;
+    
 }
 
 
