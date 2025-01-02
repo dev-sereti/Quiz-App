@@ -45,11 +45,11 @@ function startQuiz(){
 
 }
 function showQuestion(){
-    let currentquestion=questions[currentquestionIndex];
+    let currentQuestion=questions[currentquestionIndex];
     let questionNo=currentquestionIndex+1;
-    questionElement.innerHTML=questionNo+"."+currentquestion.question;
+    questionElement.innerHTML=questionNo+"."+currentQuestion.question;
     
-    currentquestion.answers.forEach(answer => {
+    currentQuestion.answers.forEach(answer => {
         const button=document.createElement("button");
         button.innerHTML=answer.text;
         button.classList.add("btn");
@@ -57,5 +57,6 @@ function showQuestion(){
         
     });
 }
+startQuiz();
 
 
