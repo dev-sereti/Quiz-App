@@ -49,6 +49,13 @@ function showQuestion(){
     let questionNo=currentquestionIndex+1;
     questionElement.innerHTML=questionNo+"."+currentquestion.question;
     
+    currentquestion.answers.forEach(answer => {
+        const button=document.createElement("button");
+        button.innerHTML=answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+        
+    });
 }
 
 
